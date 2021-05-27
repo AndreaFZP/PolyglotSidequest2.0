@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MEF2D
 {
-	public class sel
+	public class Sel
 	{
 		
 
