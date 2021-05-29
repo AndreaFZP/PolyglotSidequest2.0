@@ -116,7 +116,7 @@ namespace MEF2D
 			correctConditions(ndirich, m.getDirichlet(), m.getDirichletIndices());
 		}
 
-		private bool findIndex(int v, int s, int[] arr)
+		public bool findIndex(int v, int s, int[] arr)
 		{
 			for (int i = 0; i < s; i++)
 			{
@@ -128,12 +128,12 @@ namespace MEF2D
 			return false;
 		}
 
-		private void writeResults(mesh m, List<float> T, ref string filename)
+		public void writeResults(mesh m, List<float> T, ref string filename)
 		{
 			string outputfilename = new string(new char[150]);
 			int dirich_indices = m.getDirichletIndices();
 			condition dirich = m.getDirichlet();
-			ofstream file = new ofstream();
+			File file = new ofstream();
 
 			addExtension(ref outputfilename, ref filename, ".post.res");
 			file.open(outputfilename);
